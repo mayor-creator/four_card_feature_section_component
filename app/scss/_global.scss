@@ -1,0 +1,104 @@
+@use "./variables" as v;
+
+body {
+    font-family: v.$font-family;
+    font-size: v.$font-size;
+    background-color: v.$very_light_gray;
+    line-height: 1.5;
+
+    @include v.mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+}
+
+h1 {
+    color: v.$very_dark_blue;
+    text-align: center;
+}
+
+h2 {
+    font-weight: v.$four_hundred_font_weight;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-weight: v.$six_hundred_font_weight;
+}
+
+p {
+    color: v.$grayish_blue;
+}
+
+img {
+    position: relative;
+    left: 200px;
+    top: 20px;
+}
+
+#powered_header {
+    @include v.mobile {
+        //padding-left: 1.875rem;
+        //margin-left: 0.625rem;
+    }
+}
+
+#artificial_message {
+    @include v.mobile {
+        //margin-left: 0.625rem;
+        //margin-right: 0.625rem;
+        //padding-left: 1.875rem;
+        //padding-right: 1.25rem;
+    }
+}
+
+.card {
+    @include v.mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        padding: 1.875rem;
+    }
+}
+
+.item {
+    border-radius: 0.625rem;
+    box-shadow: 0 3px 10px v.$grayish_blue;
+
+    //box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)
+    @include v.mobile {
+        height: 14.125rem;
+        width: 19.5rem;
+        margin: auto;
+    }
+}
+
+.supervisor_card {
+    border-top-style: solid;
+    border-top-color: v.$cyan;
+}
+
+.team_builder_card {
+    border-top-style: solid;
+    border-top-color: v.$red;
+}
+
+.karma_card {
+    border-top-style: solid;
+    border-top-color: v.$orange;
+}
+
+.calculator_card {
+    border-top-style: solid;
+    border-top-color: v.$blue;
+}
+
+.header {
+    padding: 20px;
+}
+
+.message {
+    margin-left: 20px;
+}

@@ -1,0 +1,91 @@
+/* typography */
+/* primary colors */
+/* neutral colors */
+/* media queries */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  background-color: hsl(0, 0%, 98%);
+  line-height: 1.5;
+}
+@media (max-width: 30em) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+h1 {
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+img {
+  position: relative;
+  left: 200px;
+  top: 20px;
+}
+
+@media (max-width: 30em) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    padding: 1.875rem;
+  }
+}
+
+.item {
+  border-radius: 0.625rem;
+  box-shadow: 0 3px 10px hsl(229, 6%, 66%);
+}
+@media (max-width: 30em) {
+  .item {
+    height: 14.125rem;
+    width: 19.5rem;
+    margin: auto;
+  }
+}
+
+.supervisor_card {
+  border-top-style: solid;
+  border-top-color: hsl(180, 62%, 55%);
+}
+
+.team_builder_card {
+  border-top-style: solid;
+  border-top-color: hsl(0, 78%, 62%);
+}
+
+.karma_card {
+  border-top-style: solid;
+  border-top-color: hsl(34, 97%, 64%);
+}
+
+.calculator_card {
+  border-top-style: solid;
+  border-top-color: hsl(212, 86%, 64%);
+}
+
+.header {
+  padding: 20px;
+}
+
+.message {
+  margin-left: 20px;
+}/*# sourceMappingURL=style.css.map */
