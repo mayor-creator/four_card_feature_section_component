@@ -7,7 +7,6 @@ body {
   font-size: 0.938rem;
   background-color: hsl(0, 0%, 98%);
   line-height: 1.5;
-  min-height: 100vh;
 }
 @media (max-width: 30em) {
   body {
@@ -37,8 +36,14 @@ p {
 
 img {
   position: relative;
-  left: 14.375rem;
-  top: 1.875rem;
+  left: 17.5rem;
+  top: 3.75rem;
+}
+@media (max-width: 30em) {
+  img {
+    left: 14.375rem;
+    top: 1.875rem;
+  }
 }
 
 #powered_header {
@@ -46,7 +51,7 @@ img {
 }
 @media (max-width: 30em) {
   #powered_header {
-    padding-right: 10px;
+    padding-right: 0.625rem;
   }
 }
 
@@ -56,8 +61,16 @@ img {
 }
 @media (max-width: 30em) {
   #artificial_message {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+@media ((min-width: 75.0625em) and (max-width: 100em)) {
+  #artificial_message {
+    margin-left: 18.75rem;
+    padding-left: 6.25rem;
+    margin-right: 18.75rem;
+    padding-right: 7.5rem;
   }
 }
 
@@ -71,12 +84,13 @@ img {
 
 .card {
   gap: 1.5rem;
-}
-@media ((min-width: 75.0625em) and (max-width: 100em)) {
-  .card {
-    margin: 40px;
-    display: grid;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  padding: 3.125rem;
 }
 @media (max-width: 30em) {
   .card {
@@ -120,26 +134,47 @@ img {
 .header {
   padding: 1.25rem 0.625rem 0.625rem 1.25rem;
 }
+@media ((min-width: 75.0625em) and (max-width: 100em)) {
+  .header {
+    padding-left: 2rem;
+  }
+}
 
 .message {
   font-weight: 200;
-  margin-left: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media ((min-width: 75.0625em) and (max-width: 100em)) {
+  .message {
+    margin-left: 0rem;
+    padding-left: 2rem;
+    padding-right: 6.25rem;
+  }
 }
 
-/*
-.grid-col-span-4 {
-    grid-column-start: 1;
-    grid-column-end: 4;
+/* grid-items */
+.header_card_item {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
-
-.grid-col {
-    grid-column-start: 2;
-    grid-column-end: 3;
+.supervisor_card_item {
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 
+.team_builder_card_item {
+  grid-row: 2/span 2;
+}
 
-.grid-col-end-4 {
-    grid-column-start: 3;
-    grid-row-start: 2;
-}*//*# sourceMappingURL=style.css.map */
+.karma_card_item {
+  grid-row: 4/span 2;
+}
+
+.calculator_card_item {
+  grid-column-start: 3;
+  grid-row: 3/span 2;
+}/*# sourceMappingURL=style.css.map */
