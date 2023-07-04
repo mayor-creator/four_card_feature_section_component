@@ -5,12 +5,12 @@ body {
     font-size: v.$font-size;
     background-color: v.$very_light_gray;
     line-height: 1.5;
+    min-height: 100vh;
 
     @include v.mobile {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
     }
 }
 
@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-    font-weight: v.$four_hundred_font_weight;
+    font-weight: v.$six_hundred_font_weight;
     margin-bottom: 1.25rem;
 }
 
@@ -34,43 +34,57 @@ p {
 
 img {
     position: relative;
-    left: 200px;
-    top: 20px;
+    left: 14.375rem;
+    top: 1.875rem;
 }
 
 #powered_header {
+    text-align: center;
+
     @include v.mobile {
-        //padding-left: 1.875rem;
-        //margin-left: 0.625rem;
+        padding-right: 10px;
     }
 }
 
 #artificial_message {
+    font-weight: v.$two_hundred_font_weight;
+    text-align: center;
+
     @include v.mobile {
-        //margin-left: 0.625rem;
-        //margin-right: 0.625rem;
-        //padding-left: 1.875rem;
-        //padding-right: 1.25rem;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
+#karma {
+    padding-right: 3.75rem;
+}
+
+#calculator {
+    padding-right: 3.75rem
+}
+
 .card {
+    gap: 1.5rem;
+
+    @include v.laptop {
+        margin: 40px;
+        display: grid;
+    }
+
     @include v.mobile {
         display: flex;
         flex-direction: column;
-        gap: 1.875rem;
         padding: 1.875rem;
     }
 }
 
 .item {
     border-radius: 0.625rem;
-    box-shadow: 0 3px 10px v.$grayish_blue;
+    box-shadow: 0 0.188rem 0.625rem v.$grayish_blue;
 
-    //box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)
     @include v.mobile {
         height: 14.125rem;
-        width: 19.5rem;
         margin: auto;
     }
 }
@@ -96,9 +110,28 @@ img {
 }
 
 .header {
-    padding: 20px;
+    padding: 1.25rem 0.625rem 0.625rem 1.25rem;
 }
 
 .message {
-    margin-left: 20px;
+    font-weight: v.$two_hundred_font_weight;
+    margin-left: 1.25rem;
 }
+
+/*
+.grid-col-span-4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+.grid-col {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.grid-col-end-4 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}*/
