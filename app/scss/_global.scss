@@ -18,7 +18,8 @@ h1 {
     text-align: center;
 }
 
-h2 {
+span {
+    display: block;
     font-weight: v.$six_hundred_font_weight;
     margin-bottom: 1.25rem;
 }
@@ -42,6 +43,7 @@ img {
     }
 }
 
+/*
 #powered_header {
     text-align: center;
 
@@ -49,8 +51,8 @@ img {
         padding-right: 0.625rem;
     }
 }
-
-#artificial_message {
+*/
+.artificial_message {
     font-weight: v.$two_hundred_font_weight;
     text-align: center;
 

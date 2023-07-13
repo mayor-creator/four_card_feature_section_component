@@ -8,7 +8,7 @@ body {
   background-color: hsl(0, 0%, 98%);
   line-height: 1.5;
 }
-@media (max-width: 30em) {
+@media screen and (max-width: 30em) {
   body {
     display: flex;
     align-items: center;
@@ -21,7 +21,8 @@ h1 {
   text-align: center;
 }
 
-h2 {
+span {
+  display: block;
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
@@ -39,34 +40,34 @@ img {
   left: 17.5rem;
   top: 3.75rem;
 }
-@media (max-width: 30em) {
+@media screen and (max-width: 30em) {
   img {
     left: 14.375rem;
     top: 1.875rem;
   }
 }
 
+/*
 #powered_header {
-  text-align: center;
-}
-@media (max-width: 30em) {
-  #powered_header {
-    padding-right: 0.625rem;
-  }
-}
+    text-align: center;
 
-#artificial_message {
+    @include v.mobile {
+        padding-right: 0.625rem;
+    }
+}
+*/
+.artificial_message {
   font-weight: 200;
   text-align: center;
 }
-@media (max-width: 30em) {
-  #artificial_message {
+@media screen and (max-width: 30em) {
+  .artificial_message {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
 }
-@media ((min-width: 75.0625em) and (max-width: 100em)) {
-  #artificial_message {
+@media screen and ((min-width: 75.0625em) and (max-width: 100em)) {
+  .artificial_message {
     margin-left: 18.75rem;
     padding-left: 6.25rem;
     margin-right: 18.75rem;
@@ -92,7 +93,7 @@ img {
   min-height: 100vh;
   padding: 3.125rem;
 }
-@media (max-width: 30em) {
+@media screen and (max-width: 30em) {
   .card {
     display: flex;
     flex-direction: column;
@@ -104,7 +105,7 @@ img {
   border-radius: 0.625rem;
   box-shadow: 0 0.188rem 0.625rem hsl(229, 6%, 66%);
 }
-@media (max-width: 30em) {
+@media screen and (max-width: 30em) {
   .item {
     height: 14.125rem;
     margin: auto;
@@ -134,7 +135,7 @@ img {
 .header {
   padding: 1.25rem 0.625rem 0.625rem 1.25rem;
 }
-@media ((min-width: 75.0625em) and (max-width: 100em)) {
+@media screen and ((min-width: 75.0625em) and (max-width: 100em)) {
   .header {
     padding-left: 2rem;
   }
@@ -145,7 +146,7 @@ img {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-@media ((min-width: 75.0625em) and (max-width: 100em)) {
+@media screen and ((min-width: 75.0625em) and (max-width: 100em)) {
   .message {
     margin-left: 0rem;
     padding-left: 2rem;
