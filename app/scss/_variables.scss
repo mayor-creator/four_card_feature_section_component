@@ -25,12 +25,9 @@ $mobile-width: 30em;
     }
 }
 
-//@media (min-width:1201px) and (max-width:1600px) {
-$laptop_min-width: 75.0625em;
-$laptop_max-width: 100em;
-
 @mixin laptop {
-    @media screen and ((min-width: #{$laptop_min-width}) and (max-width: #{$laptop_max-width})) {
+
+    @media screen and (min-width: 30em) {
         @content;
     }
 }
