@@ -1,163 +1,144 @@
 @use "./variables" as v;
 
 body {
-    font-family: v.$font-family;
-    font-size: v.$font-size;
-    background-color: v.$very_light_gray;
-    line-height: 1.5;
-
-    @include v.mobile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  font-family: v.$font-family;
+  font-style: normal;
+  background-color: v.$very_light_gray;
+  line-height: 1.5;
 }
 
 h1 {
-    color: v.$very_dark_blue;
-    font-weight: v.$two_hundred_font_weight;
-    text-align: center;
+  color: v.$very_dark_blue;
+  font-weight: v.$extra_light;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 span {
-    display: block;
-    font-weight: v.$six_hundred_font_weight;
-    margin-bottom: 1.25rem;
-}
-
-h3 {
-    font-weight: v.$six_hundred_font_weight;
+  display: block;
+  font-weight: v.$semiBold;
+  margin-bottom: 1.25rem;
 }
 
 p {
-    color: v.$grayish_blue;
+  color: v.$grayish_blue;
 }
 
 img {
-    position: relative;
-    left: 17.5rem;
-    top: 3.75rem;
+  position: relative;
+  left: 15rem;
+  top: 3.75rem;
 
-    @include v.mobile {
-        left: 14.375rem;
-        top: 1.875rem;
-    }
+  @include v.mobile {
+    left: 14.375rem;
+    top: 1.875rem;
+  }
 }
 
 .artificial_message {
-    font-weight: v.$two_hundred_font_weight;
-    text-align: center;
-
-    @include v.mobile {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-
-    @include v.laptop {
-        margin-left: 18.75rem;
-        padding-left: 6.25rem;
-        margin-right: 18.75rem;
-        padding-right: 7.5rem;
-    }
-}
-
-.karma {
-    padding-right: 3.75rem;
-}
-
-.calculator {
-    padding-right: 3.75rem
+  font-weight: v.$regular;
+  font-size: 0.938rem;
+  text-align: center;
+  letter-spacing: 0.006rem;
 }
 
 .card {
-    gap: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    padding: 3.125rem;
+  width: min(100% - 2rem, 69.375rem);
+  margin-inline: auto;
+}
 
-    @include v.mobile {
-        display: flex;
-        flex-direction: column;
-        padding: 1.875rem;
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include v.laptop {
+    display: grid;
+    grid-template-columns: repeat(3, 21.875rem);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1.875rem;
+  }
 }
 
 .item {
-    border-radius: 0.625rem;
-    box-shadow: 0 0.188rem 0.625rem v.$grayish_blue;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.188rem 0.625rem v.$grayish_blue;
+  height: 13.875rem; //14.125rem;
 
-    @include v.mobile {
-        height: 14.125rem;
-        margin: auto;
-    }
+  @include v.laptop {
+    height: 15.625rem;
+  }
+}
+
+.header_card {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  @include v.laptop {
+    width: 33.75rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .supervisor_card {
-    border-top-style: solid;
-    border-top-color: v.$cyan;
+  border-top-style: solid;
+  border-top-color: v.$cyan;
+
+  @include v.laptop {
+    grid-area: 3 / 1 / 7 / 2;
+  }
 }
 
 .team_builder_card {
-    border-top-style: solid;
-    border-top-color: v.$red;
+  border-top-style: solid;
+  border-top-color: v.$red;
+
+  @include v.laptop {
+    grid-area: 1 / 2 / 5 / 3;
+  }
 }
 
 .karma_card {
-    border-top-style: solid;
-    border-top-color: v.$orange;
+  border-top-style: solid;
+  border-top-color: v.$orange;
+
+  @include v.laptop {
+    grid-area: 5 / 2 / 9 / 3;
+  }
 }
 
 .calculator_card {
-    border-top-style: solid;
-    border-top-color: v.$blue;
+  border-top-style: solid;
+  border-top-color: v.$blue;
+
+  @include v.laptop {
+    grid-area: 3 / 3 / 7 / 4;
+  }
 }
 
 .header {
-    padding: 1.25rem 0.625rem 0.625rem 1.25rem;
-
-    @include v.laptop {
-        padding-left: 2rem;
-    }
+  font-weight: v.$semiBold;
+  font-size: 1.25rem;
+  color: #4d4f62;
+  padding: 1.25rem 0.625rem 0.625rem 1.25rem;
 }
 
 .message {
-    font-weight: v.$two_hundred_font_weight;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  font-weight: v.$regular;
+  font-size: 0.813rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 
-    @include v.laptop {
-        margin-left: 0rem;
-        padding-left: 2rem;
-        padding-right: 6.25rem;
-    }
+  @include v.laptop {
+    padding-right: 2.5rem;
+  }
 }
 
-/* grid-items */
-.header_card_item {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 4;
+.karma {
+  padding-right: 3.75rem;
 }
 
-.supervisor_card_item {
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-
-.team_builder_card_item {
-    grid-row: 2 / span 2;
-}
-
-.karma_card_item {
-    grid-row: 4 / span 2;
-}
-
-.calculator_card_item {
-    grid-column-start: 3;
-    grid-row: 3 / span 2;
+.calculator {
+  padding-right: 3.75rem;
 }
