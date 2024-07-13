@@ -1,0 +1,155 @@
+/* typography */
+/* primary colors */
+/* neutral colors */
+/* media queries */
+body {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: hsl(0, 0%, 98%);
+  line-height: 1.5;
+}
+
+h1 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+img {
+  position: relative;
+  left: 15rem;
+  top: 3.75rem;
+}
+@media screen and (max-width: 30em) {
+  img {
+    left: 14.375rem;
+    top: 1.875rem;
+  }
+}
+
+.artificial_message {
+  font-weight: 400;
+  font-size: 0.938rem;
+  text-align: center;
+  letter-spacing: 0.006rem;
+}
+
+.card {
+  width: min(100% - 2rem, 69.375rem);
+  margin-inline: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 30em) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 21.875rem);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1.875rem;
+  }
+}
+
+.item {
+  border-radius: 0.625rem;
+  box-shadow: 0 0.188rem 0.625rem hsl(229, 6%, 66%);
+  height: 13.875rem;
+}
+@media screen and (min-width: 30em) {
+  .item {
+    height: 15.625rem;
+  }
+}
+
+.header_card {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (min-width: 30em) {
+  .header_card {
+    width: 33.75rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.supervisor_card {
+  border-top-style: solid;
+  border-top-color: hsl(180, 62%, 55%);
+}
+@media screen and (min-width: 30em) {
+  .supervisor_card {
+    grid-area: 3/1/7/2;
+  }
+}
+
+.team_builder_card {
+  border-top-style: solid;
+  border-top-color: hsl(0, 78%, 62%);
+}
+@media screen and (min-width: 30em) {
+  .team_builder_card {
+    grid-area: 1/2/5/3;
+  }
+}
+
+.karma_card {
+  border-top-style: solid;
+  border-top-color: hsl(34, 97%, 64%);
+}
+@media screen and (min-width: 30em) {
+  .karma_card {
+    grid-area: 5/2/9/3;
+  }
+}
+
+.calculator_card {
+  border-top-style: solid;
+  border-top-color: hsl(212, 86%, 64%);
+}
+@media screen and (min-width: 30em) {
+  .calculator_card {
+    grid-area: 3/3/7/4;
+  }
+}
+
+.header {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #4d4f62;
+  padding: 1.25rem 0.625rem 0.625rem 1.25rem;
+}
+
+.message {
+  font-weight: 400;
+  font-size: 0.813rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media screen and (min-width: 30em) {
+  .message {
+    padding-right: 2.5rem;
+  }
+}
+
+.karma {
+  padding-right: 3.75rem;
+}
+
+.calculator {
+  padding-right: 3.75rem;
+}/*# sourceMappingURL=style.css.map */
